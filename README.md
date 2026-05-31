@@ -244,7 +244,3 @@ This is a commercial website template. All rights reserved.
 - **Icons**: Unicode Emoji
 
 ---
-
-**Built with ❤️ for FireShield**
-
-*Last Updated: 2025*
