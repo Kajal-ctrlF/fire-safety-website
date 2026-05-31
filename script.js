@@ -250,8 +250,8 @@ function getHomePage() {
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-media" aria-hidden="true">
-        <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80">
-          <source src="https://cdn.pixabay.com/video/2023/05/09/161636-825123893_large.mp4" type="video/mp4">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80">
+          <source src="https://videos.pexels.com/video-files/6893025/6893025-uhd_2560_1440_25fps.mp4" type="video/mp4">
         </video>
       </div>
       <div class="container">
