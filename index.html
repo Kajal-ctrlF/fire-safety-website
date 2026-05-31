@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FireShield - Complete Fire Safety & Protection Solutions | Industrial Equipment Supplier</title>
+  <meta name="description" content="Leading supplier of fire safety equipment including fire extinguishers, hydrant systems, fire alarms, smoke detectors, and industrial protection products. Trusted by 1000+ clients.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🔥</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css?v=3.0">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header" id="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#home" class="logo" onclick="navigateTo('home')">
+        <div class="logo-icon">🔥</div>
+        <div class="logo-text">
+          FireShield
+          <span>Industrial Safety Solutions</span>
+        </div>
+      </a>
+
+      <nav class="nav" id="nav">
+        <div class="nav-item">
+          <a href="#home" class="nav-link active" data-nav="home" onclick="navigateTo('home', null, event)">Home</a>
+        </div>
+        <div class="nav-item" id="categoriesNavItem">
+          <button type="button" class="nav-link nav-link-btn" id="categoriesNavBtn" data-nav="categories" aria-expanded="false" aria-haspopup="true" onclick="toggleCategoryDropdown(event)">
+            Categories <span class="nav-arrow">▾</span>
+          </button>
+          <div class="dropdown" id="categoriesDropdown">
+            <a href="#category" class="dropdown-item" onclick="goToCategory('Fire Extinguishers', event)"><span class="dropdown-item-icon">🧯</span> Fire Extinguishers</a>
+            <a href="#category" class="dropdown-item" onclick="goToCategory('Fire Hydrant Systems', event)"><span class="dropdown-item-icon">💧</span> Fire Hydrant Systems</a>
+            <a href="#category" class="dropdown-item" onclick="goToCategory('Fire Alarm Systems', event)"><span class="dropdown-item-icon">🔔</span> Fire Alarm Systems</a>
+            <a href="#category" class="dropdown-item" onclick="goToCategory('Smoke Detectors', event)"><span class="dropdown-item-icon">💨</span> Smoke Detectors</a>
+            <a href="#category" class="dropdown-item" onclick="goToCategory('Emergency Lights', event)"><span class="dropdown-item-icon">💡</span> Emergency Lights</a>
+            <a href="#category" class="dropdown-item" onclick="goToCategory('Safety Signages', event)"><span class="dropdown-item-icon">⚠️</span> Safety Signages</a>
+            <a href="#category" class="dropdown-item" onclick="goToCategory('PPE Equipment', event)"><span class="dropdown-item-icon">🦺</span> PPE Equipment</a>
+            <a href="#category" class="dropdown-item" onclick="goToCategory('Fire Fighting Accessories', event)"><span class="dropdown-item-icon">🔧</span> Fire Fighting Accessories</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#products" class="nav-link" data-nav="products" onclick="navigateTo('products', null, event)">Products</a>
+        </div>
+        <div class="nav-item">
+          <a href="#about" class="nav-link" data-nav="about" onclick="navigateTo('about', null, event)">About Us</a>
+        </div>
+        <div class="nav-item">
+          <a href="#contact" class="nav-link" data-nav="contact" onclick="navigateTo('contact', null, event)">Contact</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-btn" onclick="toggleSearch()" aria-label="Search"><span class="icon-search" aria-hidden="true"></span></button>
+        <a href="#contact" class="btn btn-primary btn-sm" onclick="navigateTo('contact')">Request Quote</a>
+        <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Navigation -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#home" class="mobile-nav-link" onclick="navigateTo('home', null, event)">Home</a>
+  <a href="#products" class="mobile-nav-link" onclick="navigateTo('products', null, event)">All Products</a>
+  <div class="mobile-nav-divider"></div>
+  <a href="#category" class="mobile-nav-link" onclick="goToCategory('Fire Extinguishers', event)">🧯 Fire Extinguishers</a>
+  <a href="#category" class="mobile-nav-link" onclick="goToCategory('Fire Hydrant Systems', event)">💧 Fire Hydrant Systems</a>
+  <a href="#category" class="mobile-nav-link" onclick="goToCategory('Fire Alarm Systems', event)">🔔 Fire Alarm Systems</a>
+  <a href="#category" class="mobile-nav-link" onclick="goToCategory('Smoke Detectors', event)">💨 Smoke Detectors</a>
+  <a href="#category" class="mobile-nav-link" onclick="goToCategory('Emergency Lights', event)">💡 Emergency Lights</a>
+  <a href="#category" class="mobile-nav-link" onclick="goToCategory('Safety Signages', event)">⚠️ Safety Signages</a>
+  <a href="#category" class="mobile-nav-link" onclick="goToCategory('PPE Equipment', event)">🦺 PPE Equipment</a>
+  <a href="#category" class="mobile-nav-link" onclick="goToCategory('Fire Fighting Accessories', event)">🔧 Fire Accessories</a>
+  <div class="mobile-nav-divider"></div>
+  <a href="#about" class="mobile-nav-link" onclick="navigateTo('about', null, event)">About Us</a>
+  <a href="#contact" class="mobile-nav-link" onclick="navigateTo('contact', null, event)">Contact</a>
+</div>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="searchOverlay" onclick="closeSearchOverlay(event)">
+  <div class="search-box">
+    <button class="search-close" onclick="toggleSearch()" aria-label="Close search"><span class="icon-close" aria-hidden="true"></span></button>
+    <div class="search-input-wrap">
+      <input type="text" class="search-input" id="searchInput" placeholder="Search products, categories, brands..." autocomplete="off">
+      <button class="btn btn-primary" onclick="performSearch()">Search</button>
+    </div>
+    <div id="searchResults" class="search-live-results" aria-live="polite"></div>
+  </div>
+</div>
+
+<!-- Main App Container -->
+<div id="app">
+  <!-- Content will be dynamically loaded here -->
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo-wrap">
+            <div class="footer-logo-icon">🔥</div>
+            <span class="footer-logo-text">FireShield</span>
+          </div>
+          <p class="footer-about">
+            Leading supplier of fire safety equipment and industrial protection solutions. Protecting lives and assets since 2014.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+          </div>
+          <div class="footer-certs">
+            <span class="footer-cert-badge">ISI</span>
+            <span class="footer-cert-badge">BIS</span>
+            <span class="footer-cert-badge">ISO 9001</span>
+            <span class="footer-cert-badge">PESO</span>
+            <span class="footer-cert-badge">CE</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Products</h4>
+          <div class="footer-links">
+            <a href="#category" onclick="navigateTo('category', 'Fire Extinguishers')">Fire Extinguishers</a>
+            <a href="#category" onclick="navigateTo('category', 'Fire Hydrant Systems')">Fire Hydrant Systems</a>
+            <a href="#category" onclick="navigateTo('category', 'Fire Alarm Systems')">Fire Alarm Systems</a>
+            <a href="#category" onclick="navigateTo('category', 'Smoke Detectors')">Smoke Detectors</a>
+            <a href="#category" onclick="navigateTo('category', 'Emergency Lights')">Emergency Lights</a>
+            <a href="#category" onclick="navigateTo('category', 'Safety Signages')">Safety Signages</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <div class="footer-links">
+            <a href="#about" onclick="navigateTo('about')">About Us</a>
+            <a href="#about" onclick="navigateTo('about')">Certifications</a>
+            <a href="#contact" onclick="navigateTo('contact')">Contact Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Blog</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <span>Plot 42, Industrial Area Phase-II, New Delhi - 110020</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📞</span>
+            <a href="tel:+911800123456">1800-123-4567</a>
+          </div>
+          <div class="footer-contact-item">
+            <span>📧</span>
+            <a href="mailto:sales@fireshield.com">sales@fireshield.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <span>⏰</span>
+            <span>Mon-Sat: 9AM - 7PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2025 FireShield. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/products-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
